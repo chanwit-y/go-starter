@@ -5,7 +5,6 @@ import (
 	"go-stater/pkg/utils"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/mcuadros/go-defaults"
 )
 
 type handler struct {
@@ -21,14 +20,9 @@ func (h *handler) FindAll(c *fiber.Ctx) error {
 }
 
 func (h *handler) Create(c *fiber.Ctx) error {
-	var req *model.Client
-	if err := c.BodyParser(&req); err != nil {
+	req, err := utils.BodyParser[model.Client](c)
+	if err != nil {
 		return c.Status(fiber.ErrBadRequest.Code).JSON(err.Error())
 	}
-	defaults.SetDefaults(req)
-	if validator := utils.NewValidator().Validate(req); len(validator) != 0 {
-		return c.Status(fiber.ErrBadRequest.Code).JSON(validator)
-	}
-
 	return c.JSON(req)
 }
