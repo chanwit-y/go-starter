@@ -1,3 +1,4 @@
+//go:generate mockery --outpkg mock --all --output ./mock
 package client
 
 import (
