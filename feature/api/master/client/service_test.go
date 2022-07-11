@@ -2,7 +2,7 @@ package client
 
 import (
 	"fmt"
-	"go-stater/module/master/client/mock"
+	"go-stater/feature/api/master/client/mock"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
