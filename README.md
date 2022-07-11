@@ -4,8 +4,9 @@
 
 [mock](https://github.com/vektra/mockery)
 
+***gomodifytags***
 
-***[gomodifytags]***(https://github.com/fatih/gomodifytags)
+[gomodifytags](https://github.com/fatih/gomodifytags)
 
 ```
 gomodifytags -file demo.go -struct Server -add-tags json
