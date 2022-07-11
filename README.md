@@ -2,9 +2,8 @@
 
 [go json](https://github.com/goccy/go-json)
 
-[mock](https://github.com/vektra/mockery)
+[mockery](https://github.com/vektra/mockery)
 
-***gomodifytags***
 
 [gomodifytags](https://github.com/fatih/gomodifytags)
 
