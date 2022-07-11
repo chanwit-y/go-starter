@@ -15,6 +15,16 @@ func NewHandler(service Service) handler {
 	return handler{service: service}
 }
 
+// Application godoc
+// @Summary      Get all
+// @Description  get client info 1
+// @Tags         clients
+// @Accept       json
+// @Produce      json
+// @Param	 limit      query    number     false    "limit"
+// @Param	 offset     query    number     false    "offset"
+// @Success      200 {string} string "ok"
+// @Router       /client [get]
 func (h *handler) FindAll(c *fiber.Ctx) error {
 	return c.JSON(h.service.FindAll())
 }

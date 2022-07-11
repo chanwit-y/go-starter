@@ -1,0 +1,56 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API Endpoint for BanpuApps",
+        "title": "Banpu API",
+        "contact": {
+            "name": "Applicatoin Development",
+            "email": "fiber@swagger.io"
+        },
+        "license": {
+            "name": "Banpu Co.ltd."
+        },
+        "version": "1.0.0"
+    },
+    "host": "localhost:3001",
+    "basePath": "/api/v1/",
+    "paths": {
+        "/client": {
+            "get": {
+                "description": "get client info 1",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "clients"
+                ],
+                "summary": "Get all",
+                "parameters": [
+                    {
+                        "type": "number",
+                        "description": "limit",
+                        "name": "limit",
+                        "in": "query"
+                    },
+                    {
+                        "type": "number",
+                        "description": "offset",
+                        "name": "offset",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

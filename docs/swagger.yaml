@@ -1,0 +1,37 @@
+basePath: /api/v1/
+host: localhost:3001
+info:
+  contact:
+    email: fiber@swagger.io
+    name: Applicatoin Development
+  description: API Endpoint for BanpuApps
+  license:
+    name: Banpu Co.ltd.
+  title: Banpu API
+  version: 1.0.0
+paths:
+  /client:
+    get:
+      consumes:
+      - application/json
+      description: get client info 1
+      parameters:
+      - description: limit
+        in: query
+        name: limit
+        type: number
+      - description: offset
+        in: query
+        name: offset
+        type: number
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+      summary: Get all
+      tags:
+      - clients
+swagger: "2.0"
